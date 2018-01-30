@@ -90,7 +90,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
+function evenFinder(nums){
+  var even = []
+  for(var i = 0; i<nums.length; i++){
+    if(nums[i]%2===0){
+    even.push(nums[i]);
+    }
+  }
+  return even;
+}
 
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
@@ -107,7 +115,20 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+var divider = (arr) => {
+  var evens = [];
+  var odds = [];
+  var newArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i]%2 === 0) {
+      evens.push(arr[i]);
+    } else {
+      odds.push(arr[i]);
+    }
+  }
+  newArr = [evens, odds];
+  return newArr;
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -128,7 +149,15 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+function finder(arr){
+  var randomNum = getRandomArbitrary();
+  for(var i=0; i<arr.length; i++){
+    if(arr[i] === randomNum){
+      return true;
+    }
+  }
+  return false;
+}
 
 
 ////////// PROBLEM 8 //////////
