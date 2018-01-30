@@ -52,7 +52,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+function looper(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    alert(arr[i]);
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -67,7 +71,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+var reversedLooper = (arr) => {
+  for(var i = arr.length - 1; i >= 0; i--) {
+    alert(arr[i]);
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
