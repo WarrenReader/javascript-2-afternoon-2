@@ -184,7 +184,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(list, itemToRemove) {
+  var item = list.indexOf(itemToRemove);
+  if (item > -1) {
+    list.splice(item, 1);
+    return list;
+  }
+  return list;
+}
 
+function addItem(list, itemToAdd) {
+  var item = list.indexOf(itemToAdd);
+  if (item === -1) {
+    list.push(itemToAdd);
+    return list;
+  }
+  return list;
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -194,7 +210,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+var maker = function(){
+  var arr = [];
+  for(var i = 1; i<=215; i++){
+    arr.push(i);
+  }  
+  return arr;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -211,7 +233,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 
-
+function addTen(numArr){
+  var arr =[];
+  for(var i=0; i<numArr.length; i++){
+    arr.push(parseInt(numArr[i])+10);
+  }
+  return arr;
+}
 
 ////////// PROBLEM 11 //////////
 
@@ -235,6 +263,9 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+var longer = (numarr1, numarr2) => {
+  return numarr1 > numarr2 ? numarr1 : numarr2;
+};
 
 
 
@@ -247,6 +278,17 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+var both = (numarr1, numarr2) => {
+  var newArr = [];
+  for (var i = 0; i < numarr1.length; i++) {
+     for (var j = 0; j < numarr2.length; j++) {
+      if (numarr1[i] === numarr2[j]) {
+        newArr.push(numarr1[i]);
+      }
+    }
+  }
+  return newArr;
+}
 
 
 
@@ -287,7 +329,8 @@ var colt = {
 */
 
 //Code Here
-
+devMountainEmployees = [tyler, cahlan, ryan, colt];
+console.log(devMountainEmployees.length);
 
 
 /*
@@ -297,7 +340,13 @@ var colt = {
 
 //Code Here
 
+for (var i = 0; i < devMountainEmployees.length; i++) {
+  if (devMountainEmployees[i].name === "Cahlan") {
+    devMountainEmployees.splice(i, 1);
+  }
+}
 
+// devMountainEmployees.splice([devMountainEmployees.indexOf(cahlan)],1);
 
 ////////// PROBLEM 13 //////////
 
@@ -308,7 +357,7 @@ var colt = {
 */
 
 //Code Here
-
+var users = [];
 
 
 /*
@@ -327,7 +376,21 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
-
+var users = [
+  user1,
+  {
+    name: "Warren",
+    email: "example",
+    password: "example",
+    username: "example",
+  },
+  {
+    name: "Warren",
+    email: "example",
+    password: "example",
+    username: "example",
+  } 
+];
 
 
 /*
@@ -341,7 +404,13 @@ var user1 = {
 */
 
 //Code Here
+for(var i=0; i<users.length; i++){
+  if(users[i].email === "tylermcginnis33@gmail.com"){
+    users.splice(i,1);
 
+  }
+
+}
 
 
 /*
